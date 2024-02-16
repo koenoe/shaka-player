@@ -762,7 +762,8 @@ shaka.extern.PersistentSessionMetadata;
  *   keySystemsMapping: !Object.<string, string>,
  *   parseInbandPsshEnabled: boolean,
  *   minHdcpVersion: string,
- *   ignoreDuplicateInitData: boolean
+ *   ignoreDuplicateInitData: boolean,
+ *   enforceSingleSession: boolean
  * }}
  *
  * @property {shaka.extern.RetryParameters} retryParameters
@@ -824,6 +825,8 @@ shaka.extern.PersistentSessionMetadata;
  *   Note: Tizen 2015 and 2016 models will send multiple webkitneedkey events
  *   with the same init data. If the duplicates are supressed, playback
  *   will stall without errors.
+ * @property {boolean} enforceSingleSession
+ *   <i>Defaults to false. Can be set to true to enforce a single session</i>
  * @exportDoc
  */
 shaka.extern.DrmConfiguration;
